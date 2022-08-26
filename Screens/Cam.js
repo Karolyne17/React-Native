@@ -21,7 +21,7 @@ const devices = useCameraDevices();
 const device = devices.back;
 async function takePic() {
   const photo = await camera.current.takePhoto({
-    flash: 'off',
+    flash: 'on',
   });
   setImageUri( 'file://' + photo.path );
   console.log(photo.path);
